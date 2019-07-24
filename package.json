@@ -1,11 +1,11 @@
 {
     "title": "One Page Wonder",
-    "name": "startbootstrap-one-page-wonder",
+    "name": "portfolio",
     "version": "5.0.6",
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },
-    "description": "A one page HTML template built with Bootstrap",
+    "description": "A one page HTML built with Bootstrap",
     "keywords": [
         "css",
         "sass",

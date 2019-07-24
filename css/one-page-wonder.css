@@ -1,11 +1,11 @@
 /*!
  * Start Bootstrap - One Page Wonder v5.0.6 (https://startbootstrap.com/template-overviews/one-page-wonder)
  * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/BlackrockDigital/portfolio/blob/master/LICENSE)
  */
 
 body {
-  font-family: 'Lato';
+  font-family: 'serif';
 }
 
 h1,
@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Catamaran';
+  font-family: 'serif';
   font-weight: 800 !important;
 }
 
@@ -27,7 +27,7 @@ h6 {
 }
 
 .bg-black {
-  background-color: #000 !important;
+  background-color: #495057 !important;
 }
 
 .rounded-pill {
@@ -37,19 +37,19 @@ h6 {
 .navbar-custom {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(73, 80, 87, 0.7);
 }
 
 .navbar-custom .navbar-brand {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 2rem;
   letter-spacing: 0.1rem;
   font-weight: 700;
 }
 
 .navbar-custom .navbar-nav .nav-item .nav-link {
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
 }
@@ -59,8 +59,8 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
-  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#2b3033), to(#2f34a5));
+  background: linear-gradient(0deg, #2b3033 0%, #2f34a5 100%);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -84,8 +84,8 @@ header.masthead .bg-circle {
   z-index: 0;
   position: absolute;
   border-radius: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ee0979), to(#ff6a00));
-  background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#2f34a5), to(#2b3033));
+  background: linear-gradient(0deg, #2f34a5 0%, #2b3033 100%);
 }
 
 header.masthead .bg-circle-1 {
@@ -130,35 +130,35 @@ header.masthead .bg-circle-4 {
 }
 
 .bg-primary {
-  background-color: #ee0979 !important;
+  background-color: #2f34a5 !important;
 }
 
 .btn-primary {
-  background-color: #ee0979;
-  border-color: #ee0979;
+  background-color: #2f34a5;
+  border-color: #2f34a5;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
+  background-color: #24277d !important;
+  border-color: #24277d !important;
 }
 
 .btn-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(47, 52, 165, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(47, 52, 165, 0.5);
 }
 
 .btn-secondary {
-  background-color: #ff6a00;
-  border-color: #ff6a00;
+  background-color: #2b3033;
+  border-color: #2b3033;
 }
 
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
-  background-color: #cc5500 !important;
-  border-color: #cc5500 !important;
+  background-color: #141617 !important;
+  border-color: #141617 !important;
 }
 
 .btn-secondary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(43, 48, 51, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(43, 48, 51, 0.5);
 }
