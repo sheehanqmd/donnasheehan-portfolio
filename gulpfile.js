@@ -1,28 +1,50 @@
-const { watch, series, parallel, src, dest, gulp } = require('gulp');
-const connect = require('gulp-connect'); // Runs a local webserver
-const open = require('gulp-open'); // Opens a URL in a web browser
+const plumber = require("gulp-plumber");
+const rename = require("gulp-rename");
+const sass = require("gulp-sass");
+const uglify = require("gulp-uglify");
 
-// Launch Chrome web browser
-// https://www.npmjs.com/package/gulp-open
-function openBrowser(done) {
-  var options = {
-    uri: 'http://localhost:8080'
-  };
-  return src('./')
-  .pipe(open(options));
-  done();
+// Load package.json for banner
+const pkg = require('./package.json');
+@@ -87,41 +86,19 @@ function css() {
+    .pipe(browsersync.stream());
 }
 
-// Gulp plugin to run a webserver (with LiveReload)
-// https://www.npmjs.com/package/gulp-connect
-function server(done) {
-  return connect.server({
-    root: './',
-    port: 8080,
-    debug: true,
-  });
-  done();
+// JS task
+function js() {
+  return gulp
+    .src([
+      './js/*.js',
+      '!./js/*.min.js',
+      '!./js/contact_me.js',
+      '!./js/jqBootstrapValidation.js'
+    ])
+    .pipe(uglify())
+    .pipe(header(banner, {
+      pkg: pkg
+    }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('./js'))
+    .pipe(browsersync.stream());
 }
 
-// Default Gulp command
-exports.default = series(openBrowser, server);
+// Watch files
+function watchFiles() {
+  gulp.watch("./scss/**/*", css);
+  gulp.watch("./js/**/*", js);
+  gulp.watch("./**/*.html", browserSyncReload);
+}
+
+// Define complex tasks
+const vendor = gulp.series(clean, modules);
+const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(vendor, css);
+const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+
+// Export tasks
+exports.css = css;
+exports.js = js;
+exports.clean = clean;
+exports.vendor = vendor;
+exports.build = build;
